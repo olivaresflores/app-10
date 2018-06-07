@@ -1,0 +1,244 @@
+
+<!-- saved from url=(0084)http://www.sc.ehu.es/sbweb/fisica/cursoJava/fundamentos/introduccion/operadores1.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Los operadores </title>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+</head>
+
+<body>
+
+<h1 align="center">Los operadores (relacionales)</h1>
+
+<table width="100%">
+  <tbody><tr>
+    <td width="29%"><a href="http://www.sc.ehu.es/sbweb/fisica/cursoJava/fundamentos/introduccion/operadores.htm"><img src="./operadores_files/prev.gif" alt="prev.gif (997 bytes)" width="49" height="40"></a><a href="http://www.sc.ehu.es/sbweb/fisica/cursoJava/fundamentos/fundamentos.htm"><img src="./operadores_files/chapter.gif" alt="chapter.gif (1105 bytes)" width="49" height="40"></a><a href="http://www.sc.ehu.es/sbweb/fisica/curso.htm"><img src="./operadores_files/home.gif" alt="home.gif (1054 bytes)" width="49" height="40"></a><a href="http://www.sc.ehu.es/sbweb/fisica/cursoJava/fundamentos/introduccion/flujo.htm"><img src="./operadores_files/next.gif" alt="next.gif (998 bytes)" width="49" height="40"></a></td>
+    <td width="71%"><h3 align="right"><a href="http://www.sc.ehu.es/sbweb/fisica/cursoJava/fundamentos/introduccion/indice_intro.htm">Introducción</a></h3>
+    </td>
+  </tr>
+</tbody></table>
+
+<p><a href="http://www.sc.ehu.es/sbweb/fisica/cursoJava/fundamentos/introduccion/operadores1.htm#Los%20operadores%20relacionales">Los operadores relacionales</a></p>
+
+<p><a href="http://www.sc.ehu.es/sbweb/fisica/cursoJava/fundamentos/introduccion/operadores1.htm#Los%20operadores%20l%C3%B3gicos">Los operadores lógicos</a></p>
+
+<hr>
+
+<h2><a name="Los operadores relacionales">Los operadores relacionales</a></h2>
+
+<p><img src="./operadores_files/disco.gif" alt="disco.gif (1035 bytes)" align="middle" width="32" height="32"><strong>relacion</strong>:
+<a href="http://www.sc.ehu.es/sbweb/fisica/cursoJava/fundamentos/introduccion/codigo/RelacionApp.java">RelacionApp.java</a></p>
+
+<p>Los operadores relacionales son símbolos que se usan para comparar dos valores. Si el
+resultado de la comparación es correcto la expresión considerada es verdadera, en caso
+contrario es falsa. Por ejemplo, 8&gt;4 (ocho mayor que cuatro) es verdadera, se
+representa por el valor <strong>true</strong> del tipo básico <strong>boolean</strong>,
+en cambio, 8&lt;4 (ocho menor que cuatro) es falsa, <strong>false</strong>. En la primera
+columna de la tabla, se dan los símbolos de los operadores relacionales, el la segunda,
+el nombre de dichos operadores, y a continuación su significado mediante un ejemplo.</p>
+
+<table border="1" cellspacing="" cellpadding="4" width="547" hspace="9">
+  <tbody><tr>
+    <td width="15%" valign="TOP"><b>Operador</b></td>
+    <td width="29%" valign="TOP"><b>nombre</b></td>
+    <td width="20%" valign="TOP"><b>ejemplo</b></td>
+    <td width="36%" valign="TOP"><b>significado</b></td>
+  </tr>
+  <tr>
+    <td width="15%" valign="TOP">&lt;</td>
+    <td width="29%" valign="TOP">menor que</td>
+    <td width="20%" valign="TOP"><i>a&lt;b</i></td>
+    <td width="36%" valign="TOP"><i>a</i> es menor que <i>b</i></td>
+  </tr>
+  <tr>
+    <td width="15%" valign="TOP">&gt;</td>
+    <td width="29%" valign="TOP">mayor que</td>
+    <td width="20%" valign="TOP"><i>a&gt;b</i></td>
+    <td width="36%" valign="TOP"><i>a</i> es mayor que <i>b</i></td>
+  </tr>
+  <tr>
+    <td width="15%" valign="TOP">==</td>
+    <td width="29%" valign="TOP">igual a</td>
+    <td width="20%" valign="TOP"><i>a==b</i></td>
+    <td width="36%" valign="TOP"><i>a</i> es igual a <i>b</i></td>
+  </tr>
+  <tr>
+    <td width="15%" valign="TOP">!=</td>
+    <td width="29%" valign="TOP">no igual a</td>
+    <td width="20%" valign="TOP"><i>a!=b</i></td>
+    <td width="36%" valign="TOP"><i>a</i> no es igual a <i>b</i></td>
+  </tr>
+  <tr>
+    <td width="15%" valign="TOP">&lt;=</td>
+    <td width="29%" valign="TOP">menor que o igual a</td>
+    <td width="20%" valign="TOP"><i>a&lt;=5 </i></td>
+    <td width="36%" valign="TOP"><i>a</i> es menor que o igual a <i>b</i></td>
+  </tr>
+  <tr>
+    <td width="15%" valign="TOP">&gt;=</td>
+    <td width="29%" valign="TOP">mayor que o igual a</td>
+    <td width="20%" valign="TOP"><i>a&gt;=b</i></td>
+    <td width="36%" valign="TOP"><i>a</i> es menor que o igual a <i>b</i></td>
+  </tr>
+</tbody></table>
+
+<p>Se debe tener especial cuidado en no confundir el operador asignación con el operador
+relacional igual a. Las asignaciones se realizan con el símbolo <b>=</b>, las
+comparaciones con <b>==</b>.</p>
+
+<p>En el programa <em>RelacionApp</em>, se compara la variable <i>i</i> que guarda un 8,
+con un conjunto de valores, el resultado de la comparación es verdadero (<strong>true</strong>),
+o falso (<strong>false</strong>).</p>
+
+<table border="1" width="100%" cellspacing="">
+  <tbody><tr>
+    <td width="100%" bgcolor="#F7F7F7"><pre>public class RelacionApp {
+    public static void main(String[] args) {
+        int x=8;
+	int y=5;
+	boolean compara=(x&lt;y);
+ 	System.out.println("x&lt;y es "+compara);
+        compara=(x&gt;y);
+        System.out.println("x&gt;y es "+compara);
+        compara=(x==y);
+ 	System.out.println("x==y es "+compara);
+        compara=(x!=y);
+        System.out.println("x!=y es "+compara);
+        compara=(x&lt;=y);
+        System.out.println("x&lt;=y es "+compara);
+        compara=(x&gt;=y);
+        System.out.println("x&gt;=y es "+compara);
+    }
+}</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<p>&nbsp;</p>
+
+<h2><a name="Los operadores lógicos">Los operadores lógicos</a></h2>
+
+<p>Los operadores lógicos son: 
+
+</p><ul>
+  <li>&amp;&amp; AND (el resultado es verdadero si ambas expresiones son verdaderas)</li>
+  <li>|| OR (el resultado es verdadero si alguna expresión es verdadera)</li>
+  <li>! NOT (el resultado invierte la condición de la expresión)</li>
+</ul>
+
+<p>AND y OR trabajan con dos operandos y retornan un valor lógico basadas en las
+denominadas tablas de verdad. El operador NOT actúa sobre un operando. Estas tablas de
+verdad son conocidas y usadas en el contexto de la vida diaria, por ejemplo: "si hace
+sol Y tengo tiempo, iré a la playa", "si NO hace sol, me quedaré en
+casa", "si llueve O hace viento, iré al cine". Las tablas de verdad de los
+operadores AND, OR y NOT se muestran en las tablas siguientes</p>
+
+<p align="left">El operador lógico AND </p>
+
+<table border="1" cellspacing="" cellpadding="4" width="167" hspace="9">
+  <tbody><tr>
+    <td width="35" valign="TOP"><b>x</b></td>
+    <td width="33" valign="TOP"><b>y</b></td>
+    <td width="69" valign="TOP"><b>resultado</b></td>
+  </tr>
+  <tr>
+    <td width="35" valign="TOP">true</td>
+    <td width="33" valign="TOP">true</td>
+    <td width="69" valign="TOP">true</td>
+  </tr>
+  <tr>
+    <td width="35" valign="TOP">true</td>
+    <td width="33" valign="TOP">false</td>
+    <td width="69" valign="TOP">false</td>
+  </tr>
+  <tr>
+    <td width="35" valign="TOP">false</td>
+    <td width="33" valign="TOP">true</td>
+    <td width="69" valign="TOP">false</td>
+  </tr>
+  <tr>
+    <td width="35" valign="TOP">false</td>
+    <td width="33" valign="TOP">false</td>
+    <td width="69" valign="TOP">false</td>
+  </tr>
+</tbody></table>
+
+<p align="left">El operador lógico OR</p>
+
+<table border="1" cellspacing="" cellpadding="4" width="168" hspace="9">
+  <tbody><tr>
+    <td width="35" valign="TOP"><b>x</b></td>
+    <td width="33" valign="TOP"><b>y</b></td>
+    <td width="70" valign="TOP"><b>resultado</b></td>
+  </tr>
+  <tr>
+    <td width="35" valign="TOP">true</td>
+    <td width="33" valign="TOP">true</td>
+    <td width="70" valign="TOP">true</td>
+  </tr>
+  <tr>
+    <td width="35" valign="TOP">true</td>
+    <td width="33" valign="TOP">false</td>
+    <td width="70" valign="TOP">true</td>
+  </tr>
+  <tr>
+    <td width="35" valign="TOP">false</td>
+    <td width="33" valign="TOP">true</td>
+    <td width="70" valign="TOP">true</td>
+  </tr>
+  <tr>
+    <td width="35" valign="TOP">false</td>
+    <td width="33" valign="TOP">false</td>
+    <td width="70" valign="TOP">false</td>
+  </tr>
+</tbody></table>
+
+<p align="left">El operador lógico NOT</p>
+
+<table border="1" cellspacing="" cellpadding="4" width="166" hspace="9">
+  <tbody><tr>
+    <td width="36" valign="TOP"><b>x</b></td>
+    <td width="110" valign="TOP"><b>resultado</b></td>
+  </tr>
+  <tr>
+    <td width="36" valign="TOP">true</td>
+    <td width="110" valign="TOP">false</td>
+  </tr>
+  <tr>
+    <td width="36" valign="TOP">false</td>
+    <td width="110" valign="TOP">true</td>
+  </tr>
+</tbody></table>
+
+<p>Los operadores AND y OR combinan expresiones relacionales cuyo resultado viene dado por
+la última columna de sus tablas de verdad. Por ejemplo:</p>
+
+<pre>	(a&lt;b) &amp;&amp; (b&lt;c)</pre>
+
+<p>es verdadero (<strong>true</strong>), si ambas son verdaderas. Si alguna o ambas son
+falsas el resultado es falso (<strong>false</strong>). En cambio, la expresión</p>
+
+<pre>	(a&lt;b) ||(b&lt;c)</pre>
+
+<p>es verdadera si una de las dos comparaciones lo es. Si ambas, son falsas, el resultado
+es falso.</p>
+
+<p>La expresión " NO <i>a</i> es menor que <i>b</i>"</p>
+
+<pre>	!(a&lt;b) </pre>
+
+<p>es falsa si <i>(a&lt;b)</i> es verdadero, y es verdadera si la comparación es falsa.
+Por tanto, el operador NOT actuando sobre <i>(a&lt;b)</i> es equivalente a</p>
+
+<pre>	(a&gt;=b)</pre>
+
+<p>La expresión "NO <i>a</i> es igual a <i>b</i>"</p>
+
+<pre>	!(a==b) </pre>
+
+<p>es verdadera si <i>a</i> es distinto de <i>b</i>, y es falsa si <i>a</i> es igual a <i>b</i>.
+Esta expresión es equivalente a </p>
+
+<pre>	(a!=b)</pre>
+
+
+</body></html>
